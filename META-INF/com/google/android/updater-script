@@ -1,0 +1,10 @@
+package_extract_file("zImage", "/tmp/zImage");
+package_extract_dir("tmp", "/tmp");
+ui_print("Working on boot.img");
+set_perm(0, 0, 0777, "/tmp/zImage_worker.sh");
+run_program("/tmp/zImage_worker.sh");
+mount("yaffs2", "MTD", "system", "/system");
+ui_print("Extracting Modules");
+package_extract_dir("system", "/system");
+ui_print("Done!");
+unmount("/system");

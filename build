@@ -1,0 +1,3 @@
+#!/bin/sh
+rm kernel.zip
+zip -r -y -q kernel.zip * -x *.zip* build
