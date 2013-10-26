@@ -1,3 +1,5 @@
 #!/bin/sh
-rm kernel.zip
-zip -r -y -q kernel.zip * -x *.zip* build
+rm ./kernel.zip
+rm ./system/lib/modules/place_holder
+zip -r -y -q kernel.zip * -x *.zip* build README.md
+touch ./system/lib/modules/place_holder
