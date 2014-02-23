@@ -1,15 +1,6 @@
 #!/sbin/busybox sh
 #zImage_worker.sh
 #armv7 executables
-boot_tools=( mkbootimg mkbootfs unpackbootimg )
-for check_file in ${boot_tools[@]}
-do
-	if [ ! -e /tmp/$check_file ]
-		then
-			echo "Error: '$check_dir' executable not found";
-			exit;
-	fi
-done
 MKBOOTIMG="/tmp/mkbootimg"
 MKBOOTFS="/tmp/mkbootfs"
 UNPACKBOOTIMG="/tmp/unpackbootimg"
